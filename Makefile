@@ -137,14 +137,14 @@ OBJECTS = $(SOURCES:.c=.o) $(LIBOBJECTS)
 
 all: img4
 
-img4: $(OBJECTS) libimg4.a
+img4: $(OBJECTS) libimg4x.a
 	$(LD) -o $@ $(LDFLAGS) $^ $(LDLIBS)
 
-libimg4.a: $(LIBOBJECTS)
+libimg4x.a: $(LIBOBJECTS)
 	$(AR) $(ARFLAGS) $@ $^
 
 clean:
 	-$(RM) $(OBJECTS) $(CCOBJECTS)
 
 distclean: clean
-	-$(RM) img4 libimg4.a
+	-$(RM) img4 libimg4x.a

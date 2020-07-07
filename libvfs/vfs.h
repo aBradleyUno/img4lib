@@ -1,6 +1,11 @@
 #ifndef VFS_H_included
 #define VFS_H_included
 
+#include <stddef.h>
+#include <sys/types.h>
+
+
+
 typedef struct file_ops *FHANDLE;
 
 struct file_ops {
